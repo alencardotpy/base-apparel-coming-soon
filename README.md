@@ -36,8 +36,8 @@ Desktop View
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/alencardotpy/base-apparel-coming-soon)
+- Live Site URL: [Add live site URL here](https://alencardotpy.github.io/base-apparel-coming-soon)
 
 ## My process
 
