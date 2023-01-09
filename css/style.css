@@ -28,8 +28,8 @@ The designs were created to the following widths:
   /*
 ### Gradients
 */
-  --LinearOne: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
-  --LinearTwo: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+  --LinearOne: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --LinearTwo: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   /*
 ## Typography
 
@@ -45,8 +45,132 @@ The designs were created to the following widths:
   --FontWeightSemiBold: 600;
 }
 
+html,
+body {
+  width: auto;
+  min-width: var(--WidthMobile);
+  font-family: var(--FontFamily);
+  background: var(--LinearOne);
+}
+
+.main_container {
+  width: 100vw;
+  max-width: var(--WidthMobile);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.main_container__logo_container {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-content: center;
+}
+.main_container__logo_container__image {
+  width: 110px;
+  height: 40px;
+  padding: 10px;
+  margin: auto 20px;
+}
+.main_container__hero_container {
+  display: inherit;
+  flex-direction: inherit;
+  text-align: center;
+}
+.main_container__content_container__title_container {
+  margin: 40px 0 20px 0;
+  color: var(--ColorDesaturatedRed);
+  text-transform: uppercase;
+  letter-spacing: 15px;
+}
+.main_container__content_container__title_container__title {
+  width: 250px;
+  font-weight: var(--FontWeightLight);
+  font-size: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.main_container__content_container__title_container__title-strong {
+  color: var(--ColorDarkGrayishRed);
+}
+.main_container__content_container__text_container {
+  width: 280px;
+  margin: 0 auto 20px auto;
+}
+.main_container__content_container__text_container__text {
+  color: var(--ColorDesaturatedRed);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.main_container__form {
+  width: 280px;
+  margin: 0 auto;
+}
+.main_container__form__fieldset_container {
+  border: none;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_container__form__fieldset_container__email {
+  width: 260px;
+  height: 40px;
+  z-index: 0;
+  border-radius: 20px;
+  border: 1px solid var(--ColorDesaturatedRed);
+  padding: 0 20px;
+  color: var(--ColorDarkGrayishRed);
+  font-family: var(--FontFamily);
+  font-weight: var(--FontWeightSemiBold);
+}
+.main_container__form__fieldset_container__email:focus {
+  outline: 1px solid var(--ColorDesaturatedRed);
+}
+.main_container__form__fieldset_container__email::placeholder {
+  color: var(--ColorDesaturatedRed);
+}
+.main_container__form__fieldset_container__button {
+  position: absolute;
+  align-self: flex-end;
+  z-index: 1;
+  width: 60px;
+  height: 40px;
+  border: none;
+  background: var(--LinearTwo);
+  border-radius: 20px;
+  box-shadow: -5px 3px 10px 0 var(--ColorDesaturatedRed);
+}
+.main_container__form__fieldset_container__button:hover {
+    background: hsl(0, 63%, 84%);;
+
+  }
+.main_container__form_fieldset_container__error_icon {
+  display: none;
+  position: absolute;
+  align-self: flex-end;
+  width: 20px;
+  height: auto;
+  margin: 10px 75px auto 0;
+}
+
+.main_container__form_fieldset_container__error_message {
+  display: none;
+  font-size: 0.7rem;
+  color: var(--ColorDesaturatedRed);
+  margin: 5px 0 10px 10px;
+  font-weight: var(--FontWeightSemiBold);
+}
+
+.hero_container__image_desktop {
+  display: none;
+}
+
 /* Frontend Mentor Attribution*/
 .attribution {
+    margin-top: 40px;
+    margin-bottom: 20px;
   font-size: 11px;
   text-align: center;
 }
